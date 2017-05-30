@@ -1,19 +1,33 @@
 #container h1 {
-    color: white;
-
+  color: white;
+  float: left;
+  font-size: 48px;
+}
+#header {
+  display: flex;
+  flex-flow: row;
+}
+#form-container {
+  display: flex;
+  flex-flow: row;
 }
 #form-sidebar {
-    background-image: url(../img/form-sidebar.png);
-    clear: both;
-    float: left;
-    height: 552px;
-    width: 308px;
+  background-image: url(../img/form-sidebar.png);
+  clear: both;
+  display: flex;
+  float: left;
+  height: 552px;
+  order: 1;
+  width: 308px;
 }
-#form {
-    background-color: #f9f9fb;
-    color: #202020;
-    float: right;
-    height: 552px;
-    vertical-align: middle;
-    width: 472px;
+#form-body {
+  background-color: #f9f9fb;
+  clear: both;
+  color: #202020;
+  display: flex;
+  float: right;
+  height: 552px;
+  order: 2;
+  vertical-align: middle;
+  width: 472px;
 }

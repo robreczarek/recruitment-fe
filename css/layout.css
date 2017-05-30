@@ -1,39 +1,38 @@
-#container {
-  width: 780px;
-}
-
 #overlay-logo {
-    height: 500px;
-    left: 50%;
-    margin-top: -250px; /* Half the height */
-    margin-left: -250px; /* Half the width */
-    position: absolute;
-    top: 50%;
-    width: 500px;
-    z-index: 0;
+  height: 500px;
+  left: 50%;
+  margin-top: -250px; /* Half the height */
+  margin-left: -250px; /* Half the width */
+  position: absolute;
+  top: 50%;
+  width: 500px;
+  z-index: 0;
 }
 #overlay-left {
-    background-color: #e4e3e9;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
+  background-color: #e4e3e9;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
 }
 #overlay-right {
-    background-color: #e4e3e9;
-    height: 100%;
-    left: 45%;
-    position: absolute;
-    width: 55%;
-    z-index: -1;
+  background-color: #e4e3e9;
+  height: 100%;
+  left: 45%;
+  position: absolute;
+  width: 55%;
+  z-index: -1;
 }
 #container {
-    align-items: center;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    z-index: -2;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  width: 780px;
+  z-index: -2;
 }
