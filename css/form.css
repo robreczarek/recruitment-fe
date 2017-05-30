@@ -1,3 +1,19 @@
 #container h1 {
     color: white;
+
+}
+#form-sidebar {
+    background-image: url(../img/form-sidebar.png);
+    clear: both;
+    float: left;
+    height: 552px;
+    width: 308px;
+}
+#form {
+    background-color: #f9f9fb;
+    color: #202020;
+    float: right;
+    height: 552px;
+    vertical-align: middle;
+    width: 472px;
 }

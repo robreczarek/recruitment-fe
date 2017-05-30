@@ -1,6 +1,6 @@
-const overlayLeft = document.querySelector('#overlay-left');
-const overlayRight = document.querySelector('#overlay-right');
-const overlayLogo = document.querySelector('#overlay-logo');
+const overlayLeft = document.getElementById('overlay-left');
+const overlayRight = document.getElementById('overlay-right');
+const overlayLogo = document.getElementById('overlay-logo');
 
 let domNodeOverlayLeft = anime({
   targets: overlayLeft,
@@ -8,11 +8,8 @@ let domNodeOverlayLeft = anime({
   width: '0',
   easing: 'easeOutQuint',
   delay: '1500',
-  complete: function() {
-    anime({
-      targets: overlayLeft,
-      opacity: '0'
-    });
+  complete: () => {
+    overlayLeft.remove();
   }
 });
 
@@ -21,11 +18,8 @@ let domNodeOverlayRight = anime({
   width: '0',
   easing: 'easeOutQuint',
   delay: '1500',
-  complete: function() {
-    anime({
-      targets: overlayRight,
-      opacity: '0'
-    });
+  complete: () => {
+    overlayRight.remove();
   }
 });
 
@@ -34,10 +28,7 @@ let domNodeOverlayLogo = anime({
   opacity: '0',
   easing: 'easeOutQuint',
   delay: '1200',
-  complete: function() {
-    anime({
-      targets: overlayLogo,
-      opacity: '0'
-    });
+  complete: () => {
+    overlayLogo.remove();
   }
 });
