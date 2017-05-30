@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Robert Obreczarek -- Web Developer -- pomariumsw
+
+# THANKS
+
+    To the greats that made the tools to make our lives better and taught us to be better programmers.
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Apache Server Configs, jQuery, Modernizr, Normalize.css
