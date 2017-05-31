@@ -20,6 +20,10 @@
   order: 1;
   width: 308px;
 }
+#form-sidebar img {
+  margin: 0 auto;
+}
+
 #form-body {
   background-color: #f9f9fb;
   clear: both;
@@ -30,4 +34,7 @@
   order: 2;
   vertical-align: middle;
   width: 472px;
+}
+input, label {
+  display: block;
 }
