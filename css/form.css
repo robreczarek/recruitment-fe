@@ -35,11 +35,16 @@
   vertical-align: middle;
   width: 472px;
   padding: 50px;
+  display: flex;
+  flex-direction: column;
 }
-input, label {
-  display: block;
+.form-row {
+    display: flex;
 }
 
 #mobile_prefix {
   width: 100px;
+}
+label {
+  font-family: 'FontAwesome', 'Open Sans', sans-serif;
 }

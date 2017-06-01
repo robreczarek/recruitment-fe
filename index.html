@@ -35,16 +35,16 @@
           </div>
           <div id="form-body">
             <form id="form-user">
-              <div>
+              <div class="form-row">
                 <p>Take it all with you. Switch between devices, and pick up.</p>
               </div>
-              <div>
+              <div class="form-row">
                 <div class="input-field">
                   <label for="full_name">Your name</label>
                   <input id="full_name" type="text" class="validate" placeholder="enter your name">
                 </div>
               </div>
-              <div>
+              <div class="form-row">
                 <div class="input-field" style="width: 100px;float: left;">
                   <label for="mobile_prefix" class="active">Mobile</label>
                   <select id="mobile_prefix">
@@ -54,20 +54,38 @@
                     <option value="3">Option 3</option>
                   </select>
                 </div>
-                <div class="input-field" style="width: 250px;float: right;">
+                <div class="input-field" style="margin-left: 20px;width: 250px;float: right;">
                   <input id="mobile_number" type="text" class="validate" placeholder="000-111-222">
                 </div>
               </div>
-              <div class="input-field" style="clear: both;">
-                <input name="gender" type="radio" id="female" />
-                <label for="female">&#xf221;</label>
+              <div class="form-row">
+                <div class="input-field">
+                  <input name="gender" type="radio" id="female" />
+                  <label for="female">&#xf221;</label>
 
-                <input name="gender" type="radio" id="male" />
-                <label for="male">&#xf222;</label>
-
+                  <input name="gender" type="radio" id="male" />
+                  <label for="male">&#xf222;</label>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="input-field" style="width: 80px;float: left;">
+                  <label for="dob-day" class="active">Date of Birth</label>
+                  <input id="dob-day" type="text" class="validate" placeholder="01">
+                </div>
+                <div style="width: 25px;float: left;"> - </div>
+                <div class="input-field" style="width: 100px;float: left;">
+                  <input id="dob-day" type="text" class="validate" placeholder="January">
+                </div>
+                <div style="width: 25px;float: left;"> - </div>
+                <div class="input-field" style="width: 125px;float: left;">
+                  <input id="dob-year" type="text" class="validate" placeholder="1990">
+                </div>
               </div>
             </form>
           </div>
+        </div>
+        <div style="width: 780px;margin-top: -20px;">
+          <a class="waves-effect waves-light btn" style="float:right;">CONTINUE <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
