@@ -48,3 +48,33 @@
 label {
   font-family: 'FontAwesome', 'Open Sans', sans-serif;
 }
+
+#btn-continue {
+  background: #8658eb; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #8658eb , #6931e4); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #8658eb, #6931e4); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #8658eb, #6931e4); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #8658eb , #6931e4); /* Standard syntax */
+  color: white;
+  cursor: pointer;
+  float: right;
+  font-size: 14px
+  font-weight: bold;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  width: 190px;
+}
+
+#arrow {
+  background-color: #7841f4;
+  color: white;
+  cursor: pointer;
+  float: right;
+  font-size: 14px
+  font-weight: bold;
+  float: right;
+  height: 50px;
+  text-align: center;
+  width: 50px;
+}
