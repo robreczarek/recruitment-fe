@@ -34,7 +34,12 @@
   order: 2;
   vertical-align: middle;
   width: 472px;
+  padding: 50px;
 }
 input, label {
   display: block;
+}
+
+#mobile_prefix {
+  width: 100px;
 }

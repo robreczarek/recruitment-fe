@@ -35,11 +35,36 @@
           </div>
           <div id="form-body">
             <form id="form-user">
-              <div class="row">
+              <div>
+                <p>Take it all with you. Switch between devices, and pick up.</p>
+              </div>
+              <div>
                 <div class="input-field">
-                  <label for="full_name">Name</label>
-                  <input placeholder="enter your name" id="full_name" type="text" class="validate">
+                  <label for="full_name">Your name</label>
+                  <input id="full_name" type="text" class="validate" placeholder="enter your name">
                 </div>
+              </div>
+              <div>
+                <div class="input-field" style="width: 100px;float: left;">
+                  <label for="mobile_prefix" class="active">Mobile</label>
+                  <select id="mobile_prefix">
+                    <option value="" disabled selected>+48 (PL)</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>
+                </div>
+                <div class="input-field" style="width: 250px;float: right;">
+                  <input id="mobile_number" type="text" class="validate" placeholder="000-111-222">
+                </div>
+              </div>
+              <div class="input-field" style="clear: both;">
+                <input name="gender" type="radio" id="female" />
+                <label for="female">&#xf221;</label>
+
+                <input name="gender" type="radio" id="male" />
+                <label for="male">&#xf222;</label>
+
               </div>
             </form>
           </div>
@@ -47,6 +72,12 @@
       </div>
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://use.fontawesome.com/d9b3ef3db0.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('select').material_select();
+      });
+    </script>
     <script src="js/vendor/anime.min.js"></script>
     <script src="./bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>

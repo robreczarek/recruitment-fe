@@ -41,3 +41,6 @@ body {
   background-position: right bottom;
   background-repeat: no-repeat;
 }
+label {
+  font-family: 'FontAwesome', 'Open Sans', sans-serif;
+}
