@@ -21,7 +21,7 @@
   width: 308px;
 }
 #form-sidebar img {
-  margin: 0 auto;
+  margin: auto;
 }
 
 #form-body {
@@ -41,7 +41,10 @@
 .form-row {
     display: flex;
 }
-
+#form-description {
+  margin-bottom: 50px;
+  font-family: 'FontAwesome', 'Open Sans', sans-serif;
+}
 #mobile_prefix {
   width: 100px;
 }
@@ -65,7 +68,9 @@ label {
   vertical-align: middle;
   width: 190px;
 }
-
+.form-gender {
+  padding: 0 20px 20px 0;
+}
 #arrow {
   background-color: #7841f4;
   color: white;
@@ -77,4 +82,8 @@ label {
   height: 50px;
   text-align: center;
   width: 50px;
+}
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #531fc0;
+  box-shadow: 0 1px 0 0 #531fc0;
 }

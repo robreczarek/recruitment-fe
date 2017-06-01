@@ -7,13 +7,13 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="./css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/form.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
     <!--[if lte IE 9]>
@@ -33,12 +33,12 @@
         </div>
         <div id="form-container">
           <div id="form-sidebar">
-            <img src="./img/form-sidebar-lines.png" />
+            <img src="./img/form-sidebar-lines.png" height="304" width="198" id="form-sidebar-lines" />
           </div>
           <div id="form-body">
             <form id="form-user">
               <div class="form-row">
-                <p>Take it all with you. Switch between devices, and pick up.</p>
+                <p id="form-description">Take it all with you. Switch between devices, and pick up.</p>
               </div>
               <div class="form-row">
                 <div class="input-field">
@@ -51,9 +51,6 @@
                   <label for="mobile_prefix" class="active">Mobile</label>
                   <select id="mobile_prefix">
                     <option value="" disabled selected>+48 (PL)</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
                   </select>
                 </div>
                 <div class="input-field" style="margin-left: 20px;width: 250px;float: right;">
@@ -61,13 +58,10 @@
                 </div>
               </div>
               <div class="form-row">
-                <div class="input-field">
-                  <input name="gender" type="radio" id="female" />
-                  <label for="female">&#xf221;</label>
+                <img src="./img/form-gender-mars-off.png" border="0" class="form-gender" id="male" />
 
-                  <input name="gender" type="radio" id="male" />
-                  <label for="male">&#xf222;</label>
-                </div>
+                <img src="./img/form-gender-venus-off.png" border="0" class="form-gender" id="female" />
+                <input type="hidden" id="form-gender" value="" />
               </div>
               <div class="form-row">
                 <div class="input-field" style="width: 80px;float: left;">
@@ -101,6 +95,18 @@
     <script type="text/javascript">
       $(document).ready(function() {
         $('select').material_select();
+
+        $('#female').click(() => {
+          $('#form-gender').val('female');
+          $('#male').attr('src', './img/form-gender-mars-off.png');
+          $('#female').attr('src', './img/form-gender-venus-on.png');
+        });
+
+        $('#male').click(() => {
+          $('#form-gender').val('male');
+          $('#female').attr('src', './img/form-gender-venus-off.png');
+          $('#male').attr('src', './img/form-gender-mars-on.png');
+        });
       });
     </script>
     <script src="js/vendor/anime.min.js"></script>
