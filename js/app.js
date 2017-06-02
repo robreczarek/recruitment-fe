@@ -82,8 +82,6 @@ let domformSidebarLines = anime({
   update: function(anim) {
     if (anim.currentTime >= 3800) {
       let progress = (anim.currentTime - 3800) / 5;
-      //EasingFunctions.easeOutQuint()
-      console.log(progress);
       $('#form-sidebar-lines').css('clip-path', 'polygon(' + progress + '% 0%, ' + progress + '% 100%, 0% 100%, 0% 0%)');
     }
     if (anim.currentTime == 4300) {

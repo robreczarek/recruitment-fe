@@ -2,7 +2,7 @@
   color: white;
   font-size: 48px;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 840px) {
   #container h1 {
     padding-left: 358px;
   }
@@ -43,21 +43,44 @@
   display: flex;
   flex-direction: column;
 }
+#form-description {
+  margin-bottom: 50px;
+}
+#form-navigation {
+  color: white;
+  display: flex;
+  float: right;
+  font-size: 11px;
+  height: 552px;
+  order: 3;
+  padding-top: 100px;
+  width: 55px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+#form-navigation div {
+  margin-bottom: 60px;
+}
+#form-navigation p {
+  margin-left: 10px;
+}
+#form-navigation div.active {
+  border-top: 1px solid #1af2b8;
+  width: 25px;
+}
+#form-navigation div.inactive {
+  border-top: 1px solid #585858;
+  width: 25px;
+}
 .clip-path {
   clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 100% 0%);
 }
 .form-row {
     display: flex;
 }
-#form-description {
-  margin-bottom: 50px;
-  font-family: 'FontAwesome', 'Open Sans', sans-serif;
-}
 #mobile_prefix {
   width: 100px;
-}
-label {
-  font-family: 'FontAwesome', 'Open Sans', sans-serif;
 }
 #btn-continue {
   background: #8658eb; /* For browsers that do not support gradients */
