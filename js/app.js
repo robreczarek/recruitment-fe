@@ -3,6 +3,9 @@ const overlayRight = document.getElementById('overlay-right');
 const overlayLogo = document.getElementById('overlay-logo');
 const bgGradient = document.getElementById('bg-gradient');
 const bgLines = document.getElementById('bg-lines');
+const formSidebar = document.getElementById('form-sidebar');
+const formSidebarLines = document.getElementById('form-sidebar-lines');
+const formBody = document.getElementById('form-body');
 
 let domNodeOverlayLeft = anime({
   targets: overlayLeft,
@@ -37,7 +40,7 @@ let domNodeOverlayLogo = anime({
 
 let domNodeBgGradient = anime({
   targets: bgGradient,
-  width: ['40%', '45%'],
+  width: ['50%', '55%'],
   easing: 'linear',
   delay: '1500',
   duration: '4000'
@@ -58,3 +61,36 @@ let domNodebgLines = anime({
     easing: 'linear'
   }
 });
+
+let domformSidebar = anime({
+  targets: formSidebar,
+  duration: 4000,
+  easing: 'linear',
+  update: function(anim) {
+    $('#form-sidebar').css('clip-path', 'polygon(100% 0%, 100% 100%, ' + (100 - anim.progress) + '% 100%, ' + (100 - anim.progress) + '% 0%)');
+    console.log(anim.progress);
+    //
+  }
+});
+
+// let domformSidebarLines = anime({
+//   targets: formSidebarLines,
+//   easing: 'linear',
+//   delay: '2500',
+//   width: {
+//     value: ['0', '198'],
+//     duration: 1000,
+//     easing: 'linear'
+//   }
+// });
+//
+// let domformBody = anime({
+//   targets: formBody,
+//   easing: 'linear',
+//   delay: '2500',
+//   width: {
+//     value: ['0', '472'],
+//     duration: 1000,
+//     easing: 'linear'
+//   }
+// });

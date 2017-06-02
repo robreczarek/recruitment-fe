@@ -23,7 +23,6 @@
 #form-sidebar img {
   margin: auto;
 }
-
 #form-body {
   background-color: #f9f9fb;
   clear: both;
@@ -51,7 +50,6 @@
 label {
   font-family: 'FontAwesome', 'Open Sans', sans-serif;
 }
-
 #btn-continue {
   background: #8658eb; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(left, #8658eb , #6931e4); /* For Safari 5.1 to 6.0 */
@@ -69,7 +67,7 @@ label {
   width: 190px;
 }
 .form-gender {
-  padding: 0 20px 20px 0;
+  padding: 0 20px 10px 0;
 }
 #arrow {
   background-color: #7841f4;
