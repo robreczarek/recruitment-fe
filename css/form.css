@@ -13,6 +13,15 @@
   text-align: left;
   width: 100%;
 }
+#form-top-stripe {
+  background-color: #1bfec0;
+  bottom: 0px;
+  height: 3px;
+  margin-top: -51px;
+  margin-left: -10px;
+  width: 70px;
+  z-index: 2;
+}
 #form-container {
   display: flex;
   flex-flow: row;
@@ -81,6 +90,11 @@
 }
 #mobile_prefix {
   width: 100px;
+}
+#form-buttons {
+  width: 730px;
+  margin-top: -25px;
+  margin-right: -100px;
 }
 #btn-continue {
   background: #8658eb; /* For browsers that do not support gradients */
