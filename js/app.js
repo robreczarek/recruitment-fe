@@ -5,7 +5,7 @@ const bgGradient = document.getElementById('bg-gradient');
 const bgLines = document.getElementById('bg-lines');
 const formSidebar = document.getElementById('form-sidebar');
 const formSidebarLines = document.getElementById('form-sidebar-lines');
-const formBody = document.getElementById('form-body');
+const formBody = document.querySelector('.form-main');
 
 let mainTimeline = anime.timeline();
 
@@ -99,10 +99,10 @@ let domformBody = anime({
   update: function(anim) {
     if (anim.currentTime >= 2300) {
       let progress = (anim.currentTime - 2300) / 10;
-      $('#form-body').css('clip-path', 'polygon(' + progress + '% 0%, ' + progress + '% 100%, 0% 100%, 0% 0%)');
+      $('.form-main').css('clip-path', 'polygon(' + progress + '% 0%, ' + progress + '% 100%, 0% 100%, 0% 0%)');
     }
     if (anim.currentTime == 3300) {
-      $('#form-body').removeClass('clip-path');
+      $('.form-main').removeClass('clip-path');
     }
   }
 });
