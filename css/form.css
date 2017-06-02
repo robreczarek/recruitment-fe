@@ -97,8 +97,8 @@
   margin-right: -100px;
 }
 #btn-continue {
-  background: #8658eb; /* For browsers that do not support gradients */
-  background: linear-gradient(to right, #8658eb , #6931e4); /* Standard syntax */
+  background: #8658eb;
+  background: linear-gradient(to right, #8658eb , #6931e4);
   color: white;
   cursor: pointer;
   float: right;

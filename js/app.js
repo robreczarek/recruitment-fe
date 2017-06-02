@@ -1,3 +1,24 @@
+$(document).ready(function() {
+  $('select').material_select();
+
+  $('#female').click(() => {
+    $('#form-gender').val('female');
+    $('#male').attr('src', './img/form-gender-mars-off.png');
+    $('#female').attr('src', './img/form-gender-venus-on.png');
+  });
+
+  $('#male').click(() => {
+    $('#form-gender').val('male');
+    $('#female').attr('src', './img/form-gender-venus-off.png');
+    $('#male').attr('src', './img/form-gender-mars-on.png');
+  });
+
+  $('#arrow, #btn-continue').click(function() {
+    $('#form-user').submit();
+  })
+
+});
+
 const overlayLeft = document.getElementById('overlay-left');
 const overlayRight = document.getElementById('overlay-right');
 const overlayLogo = document.getElementById('overlay-logo');

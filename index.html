@@ -36,26 +36,26 @@
             <img src="./img/form-sidebar-lines.png" height="304" width="198" id="form-sidebar-lines" class="clip-path" />
           </div>
           <div id="form-body" class="clip-path form-main">
-            <div id="form-top-stripe"></div>
-            <form id="form-user">
+          <div id="form-top-stripe"></div>
+            <form id="form-user" action="#">
               <div class="form-row">
                 <p id="form-description">Take it all with you. Switch between devices, and pick up.</p>
               </div>
               <div class="form-row">
                 <div class="input-field">
                   <label for="full_name">Your name</label>
-                  <input id="full_name" type="text" class="validate" placeholder="enter your name">
+                  <input id="full_name" type="text" class="validate" placeholder="enter your name" required="" aria-required="true">
                 </div>
               </div>
               <div class="form-row">
                 <div class="input-field" style="width: 100px;float: left;">
                   <label for="mobile_prefix" class="active">Mobile</label>
-                  <select id="mobile_prefix">
+                  <select id="mobile_prefix" required="" aria-required="true">
                     <option value="" disabled selected>+48 (PL)</option>
                   </select>
                 </div>
                 <div class="input-field" style="margin-left: 20px;width: 250px;float: right;">
-                  <input id="mobile_number" type="text" class="validate" placeholder="000-111-222">
+                  <input id="mobile_number" type="text" class="validate" placeholder="000-111-222" required="" aria-required="true">
                 </div>
               </div>
               <div class="form-row">
@@ -68,15 +68,15 @@
               <div class="form-row">
                 <div class="input-field" style="width: 80px;float: left;">
                   <label for="dob-day" class="active">Date of Birth</label>
-                  <input id="dob-day" type="text" class="validate" placeholder="01">
+                  <input id="dob-day" type="text" class="validate" placeholder="01" required="" aria-required="true">
                 </div>
                 <div style="width: 25px;float: left;"> - </div>
                 <div class="input-field" style="width: 100px;float: left;">
-                  <input id="dob-day" type="text" class="validate" placeholder="January">
+                  <input id="dob-day" type="text" class="validate" placeholder="January" required="" aria-required="true">
                 </div>
                 <div style="width: 25px;float: left;"> - </div>
                 <div class="input-field" style="width: 125px;float: left;">
-                  <input id="dob-year" type="text" class="validate" placeholder="1990">
+                  <input id="dob-year" type="text" class="validate" placeholder="1990" required="" aria-required="true">
                 </div>
               </div>
             </form>
@@ -100,32 +100,15 @@
           <div id="arrow">
             <p>&rarr;</p>
           </div>
-          <div id="btn-continue">
-            <p>CONTINUE</p>
+          <button class="btn waves-effect waves-light" id="btn-continue" type="submit" name="action">CONTINUE</button>
+          <div id="">
+            <p></p>
           </div>
         </div>
       </div>
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://use.fontawesome.com/d9b3ef3db0.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('select').material_select();
-
-        $('#female').click(() => {
-          $('#form-gender').val('female');
-          $('#male').attr('src', './img/form-gender-mars-off.png');
-          $('#female').attr('src', './img/form-gender-venus-on.png');
-        });
-
-        $('#male').click(() => {
-          $('#form-gender').val('male');
-          $('#female').attr('src', './img/form-gender-venus-off.png');
-          $('#male').attr('src', './img/form-gender-mars-on.png');
-        });
-
-      });
-    </script>
     <script src="js/vendor/anime.min.js"></script>
     <script src="./bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
