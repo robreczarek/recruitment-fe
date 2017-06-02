@@ -7,6 +7,33 @@
     padding-left: 358px;
   }
 }
+@media screen and (max-width: 840px) {
+  #form-body {
+    background-color: #f9f9fb;
+    clear: both;
+    color: #202020;
+    display: flex;
+    float: right;
+    height: 552px;
+    order: 2;
+    vertical-align: middle;
+    width: 280px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  #form-buttons {
+    width: 280px;
+    margin-top: -25px;
+    margin-right: 100px;
+  }
+  #container h1 {
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
 #header {
   display: flex;
   flex-flow: row;

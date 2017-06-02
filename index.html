@@ -20,9 +20,9 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
     <!-- Begin: Overlay -->
-    <img src="./img/10clouds-logo.svg" id="overlay-logo" />
-    <div id="overlay-left"></div>
-    <div id="overlay-right"></div>
+    <img src="./img/10clouds-logo.svg" id="overlay-logo" class="hide-on-small-only" />
+    <div id="overlay-left" class="hide-on-small-only"></div>
+    <div id="overlay-right" class="hide-on-small-only"></div>
     <img src="./img/bg-gradient.png" id="bg-gradient" />
     <img src="./img/bg-lines.png" id="bg-lines" />
     <!-- End: Overlay -->
@@ -32,7 +32,7 @@
           <h1>Your account</h1>
         </div>
         <div id="form-container">
-          <div id="form-sidebar" class="clip-path">
+          <div id="form-sidebar" class="clip-path hide-on-small-only">
             <img src="./img/form-sidebar-lines.png" height="304" width="198" id="form-sidebar-lines" class="clip-path" />
           </div>
           <div id="form-body" class="clip-path form-main">
@@ -81,7 +81,7 @@
                 </div>
               </div>
           </div>
-          <div class="clip-path form-main" id="form-navigation">
+          <div class="clip-path form-main hide-on-small-only" id="form-navigation">
 
             <div class="inactive">
               <p>01</p>
