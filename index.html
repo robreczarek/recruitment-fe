@@ -37,7 +37,7 @@
           </div>
           <div id="form-body" class="clip-path form-main">
           <div id="form-top-stripe"></div>
-            <form id="form-user" action="#">
+            <form id="form-user">
               <div class="form-row">
                 <p id="form-description">Take it all with you. Switch between devices, and pick up.</p>
               </div>
@@ -51,7 +51,8 @@
                 <div class="input-field" style="width: 100px;float: left;">
                   <label for="mobile_prefix" class="active">Mobile</label>
                   <select id="mobile_prefix" required="" aria-required="true">
-                    <option value="" disabled selected>+48 (PL)</option>
+                    <option value="48" selected>+48 (PL)</option>
+                    <option value="1">+1 (US)</option>
                   </select>
                 </div>
                 <div class="input-field" style="margin-left: 20px;width: 250px;float: right;">
@@ -79,7 +80,6 @@
                   <input id="dob-year" type="text" class="validate" placeholder="1990" required="" aria-required="true">
                 </div>
               </div>
-            </form>
           </div>
           <div class="clip-path form-main" id="form-navigation">
 
@@ -93,7 +93,6 @@
             <div class="inactive">
               <p>03</p>
             </div>
-
           </div>
         </div>
         <div class="clip-path form-main" id="form-buttons">
@@ -101,14 +100,12 @@
             <p>&rarr;</p>
           </div>
           <button class="btn waves-effect waves-light" id="btn-continue" type="submit" name="action">CONTINUE</button>
-          <div id="">
-            <p></p>
-          </div>
+          </form>
         </div>
       </div>
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://use.fontawesome.com/d9b3ef3db0.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.js"></script>
     <script src="js/vendor/anime.min.js"></script>
     <script src="./bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>

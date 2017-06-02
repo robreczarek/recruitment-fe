@@ -13,10 +13,6 @@ $(document).ready(function() {
     $('#male').attr('src', './img/form-gender-mars-on.png');
   });
 
-  $('#arrow, #btn-continue').click(function() {
-    $('#form-user').submit();
-  })
-
 });
 
 const overlayLeft = document.getElementById('overlay-left');

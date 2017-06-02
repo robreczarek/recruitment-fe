@@ -13,5 +13,6 @@ module.exports = {
   devServer: {
     open: true, // to open the local server in browser
     contentBase: path.resolve(__dirname),
+    disableHostCheck: true,
   },
 };
