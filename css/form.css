@@ -1,11 +1,17 @@
 #container h1 {
   color: white;
-  float: left;
   font-size: 48px;
+}
+@media screen and (min-width: 800px) {
+  #container h1 {
+    padding-left: 358px;
+  }
 }
 #header {
   display: flex;
   flex-flow: row;
+  text-align: left;
+  width: 100%;
 }
 #form-container {
   display: flex;
@@ -37,6 +43,9 @@
   display: flex;
   flex-direction: column;
 }
+.clip-path {
+  clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 100% 0%);
+}
 .form-row {
     display: flex;
 }
@@ -52,9 +61,6 @@ label {
 }
 #btn-continue {
   background: #8658eb; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, #8658eb , #6931e4); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, #8658eb, #6931e4); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, #8658eb, #6931e4); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to right, #8658eb , #6931e4); /* Standard syntax */
   color: white;
   cursor: pointer;
@@ -62,9 +68,11 @@ label {
   font-size: 14px
   font-weight: bold;
   height: 50px;
+  position: relative;
   text-align: center;
   vertical-align: middle;
   width: 190px;
+  z-index: 2;
 }
 .form-gender {
   padding: 0 20px 10px 0;

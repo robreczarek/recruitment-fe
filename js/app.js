@@ -7,49 +7,47 @@ const formSidebar = document.getElementById('form-sidebar');
 const formSidebarLines = document.getElementById('form-sidebar-lines');
 const formBody = document.getElementById('form-body');
 
-let domNodeOverlayLeft = anime({
+let mainTimeline = anime.timeline();
+
+mainTimeline.add({
   targets: overlayLeft,
   translateX: '45vw',
-  width: '0',
+  width: 0,
   easing: 'easeOutQuint',
-  delay: '1500',
   complete: () => {
     overlayLeft.remove();
-  }
-});
-
-let domNodeOverlayRight = anime({
+  },
+  offset: 1500
+})
+.add({
   targets: overlayRight,
   width: '0',
   easing: 'easeOutQuint',
-  delay: '1500',
   complete: () => {
     overlayRight.remove();
-  }
-});
-
-let domNodeOverlayLogo = anime({
+  },
+  offset: 1500
+})
+.add({
   targets: overlayLogo,
-  opacity: '0',
+  opacity: 0,
   easing: 'easeOutQuint',
-  delay: '1200',
   complete: () => {
     overlayLogo.remove();
-  }
-});
-
-let domNodeBgGradient = anime({
+  },
+  offset: 1200
+})
+.add({
   targets: bgGradient,
   width: ['50%', '55%'],
   easing: 'linear',
-  delay: '1500',
-  duration: '4000'
-});
-
-let domNodebgLines = anime({
+  offset: 1500,
+  duration: 4000
+})
+.add({
   targets: bgLines,
   easing: 'linear',
-  delay: '1500',
+  offset: 1500,
   rotate: {
     value: [5, 0],
     duration: 1800,
@@ -64,33 +62,47 @@ let domNodebgLines = anime({
 
 let domformSidebar = anime({
   targets: formSidebar,
-  duration: 4000,
-  easing: 'linear',
+  easing: 'easeOutQuint',
+  duration: 3300,
   update: function(anim) {
-    $('#form-sidebar').css('clip-path', 'polygon(100% 0%, 100% 100%, ' + (100 - anim.progress) + '% 100%, ' + (100 - anim.progress) + '% 0%)');
-    console.log(anim.progress);
-    //
+    if (anim.currentTime >= 2300) {
+      let progress = (anim.currentTime - 2300) / 10;
+      $('#form-sidebar').css('clip-path', 'polygon(100% 0%, 100% 100%, ' + (100 - progress) + '% 100%, ' + (100 - progress) + '% 0%)');
+    }
+    if (anim.currentTime == 3300) {
+      $('#form-sidebar').removeClass('clip-path');
+    }
   }
 });
 
-// let domformSidebarLines = anime({
-//   targets: formSidebarLines,
-//   easing: 'linear',
-//   delay: '2500',
-//   width: {
-//     value: ['0', '198'],
-//     duration: 1000,
-//     easing: 'linear'
-//   }
-// });
-//
-// let domformBody = anime({
-//   targets: formBody,
-//   easing: 'linear',
-//   delay: '2500',
-//   width: {
-//     value: ['0', '472'],
-//     duration: 1000,
-//     easing: 'linear'
-//   }
-// });
+let domformSidebarLines = anime({
+  targets: formSidebarLines,
+  easing: 'easeOutQuint',
+  duration: 4300,
+  update: function(anim) {
+    if (anim.currentTime >= 3800) {
+      let progress = (anim.currentTime - 3800) / 5;
+      //EasingFunctions.easeOutQuint()
+      console.log(progress);
+      $('#form-sidebar-lines').css('clip-path', 'polygon(' + progress + '% 0%, ' + progress + '% 100%, 0% 100%, 0% 0%)');
+    }
+    if (anim.currentTime == 4300) {
+      $('#form-sidebar-lines').removeClass('clip-path');
+    }
+  }
+});
+
+let domformBody = anime({
+  targets: formBody,
+  easing: 'easeOutQuint',
+  duration: 3300,
+  update: function(anim) {
+    if (anim.currentTime >= 2300) {
+      let progress = (anim.currentTime - 2300) / 10;
+      $('#form-body').css('clip-path', 'polygon(' + progress + '% 0%, ' + progress + '% 100%, 0% 100%, 0% 0%)');
+    }
+    if (anim.currentTime == 3300) {
+      $('#form-body').removeClass('clip-path');
+    }
+  }
+});
